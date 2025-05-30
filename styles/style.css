@@ -1,0 +1,719 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Poppins';
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+    padding: 30px 102px 30px 54px;
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.logo-img {
+    width: 50px;
+    height: 32px;
+}
+
+/* Logo Hover Effect */
+.logo-container {
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.05);
+}
+
+.logo-text {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 41px;
+    letter-spacing: 0px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 75px;
+    font-weight: 600;
+}
+
+.nav-list a {
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #b88e2f;
+    transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+.buttons-list {
+    display: flex;
+    gap: 48px;
+}
+
+.buttons-list a {
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.buttons-list a img {
+    transition: transform 0.2s ease;
+}
+
+.buttons-list a:hover img {
+    transform: scale(1.1);
+}
+
+.buttons-list a:active img {
+    transform: scale(0.95);
+}
+
+/* HERO */
+.hero-section {
+    background-image: url('../public/images/scandinavian-interior-mockup-wall-decal-background\ 1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: end;
+    padding-top: 153px;
+    padding-right: 78px;
+    padding-bottom: 133px;
+    margin-bottom: 60px;
+}
+
+.hero-text {
+    padding: 62px 43px 37px 39px;
+    max-width: 550px;
+    background-color: #fff3e3;
+}
+
+.hero-arrival {
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 3px;
+    margin-bottom: 4px;
+}
+
+.hero-title {
+    color: rgb(184, 142, 47);
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: 0px;
+    margin-bottom: 17px;
+}
+
+.hero-subtitle {
+    color: rgb(51, 51, 51);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    margin-bottom: 46px;
+}
+
+.hero-btn {
+    background-color: #b88e2f;
+    padding: 25px 72px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+}
+
+.hero-btn {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-btn:hover {
+    background-color: #9e7626;
+    transform: translateY(-2px);
+}
+
+.hero-btn:active {
+    transform: translateY(0);
+}
+
+/* BROWSE THE RANGE */
+.browse {
+    margin-bottom: 60px;
+}
+
+.browse-title {
+    color: rgb(51, 51, 51);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.browse-subtitle {
+    color: rgb(102, 102, 102);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.browse-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.browse-images--item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Browse Images */
+.browse-images--item {
+    transition: transform 0.3s ease;
+}
+
+.browse-images--item:hover {
+    transform: translateY(-10px);
+}
+
+.browse-images--item img {
+    margin-bottom: 30px;
+}
+
+.browse-images--title {
+    color: rgb(51, 51, 51);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0px;
+}
+
+/* OUR PRODUCTS */
+.products {
+    padding-inline: 102px;
+    margin-bottom: 70px;
+}
+
+.products-title {
+    color: rgb(58, 58, 58);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.products-cards {
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.products-card {
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.products-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.products-card-text {
+    background-color: rgb(244, 245, 247);
+    padding: 16px 16px 30px 16px;
+}
+
+.products-card--title {
+    color: rgb(58, 58, 58);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0%;
+    margin-bottom: 8px;
+}
+
+.products-card--desc {
+    color: rgb(137, 137, 137);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0%;
+    margin-bottom: 8px;
+}
+
+.products-card--price {
+    color: rgb(58, 58, 58);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0%;
+}
+
+.products-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.products-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(58, 58, 58, 0.72);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.products-card:hover::before {
+    opacity: 1;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 100%;
+}
+
+.products-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.add-to-cart-btn {
+    background-color: #ffffff;
+    padding: 12px 42px;
+    color: #b88e2f;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #b88e2f;
+    color: #ffffff;
+}
+
+.card-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-action-btn {
+    color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.1s ease;
+}
+
+.card-action-btn:hover span {
+    transition: color 0.1s ease;
+}
+
+.card-action-btn img {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.1s ease;
+}
+
+.card-action-btn:hover,
+.card-action-btn:hover span {
+    color: #b88e2f;
+}
+
+.card-action-btn:hover img {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(18%) saturate(1104%)
+        hue-rotate(2deg) brightness(89%) contrast(90%);
+}
+
+.products-show-more {
+    color: rgb(184, 142, 47);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0%;
+    padding: 12px 74px 12px 82px;
+    border: 1px solid rgb(184, 142, 47);
+    margin-bottom: 70px;
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+}
+
+/* Show More Link */
+.products-show-more {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.products-show-more:hover {
+    background-color: #b88e2f;
+    color: #ffffff;
+}
+
+/* BEAUTIFUL ROOMS */
+.rooms {
+    background-color: rgb(252, 248, 243);
+    padding: 44px 0px 44px 104px;
+    display: flex;
+    gap: 42px;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.rooms--left-part {
+    max-width: 422px;
+}
+
+.rooms-title {
+    color: rgb(58, 58, 58);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0%;
+    margin-bottom: 8px;
+}
+
+.rooms-subtitle {
+    color: rgb(97, 97, 97);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0%;
+    margin-bottom: 26px;
+}
+
+.rooms-btn {
+    background: rgb(184, 142, 47);
+    padding: 12px 36px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0%;
+}
+
+/* Rooms Button */
+.rooms-btn {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.rooms-btn:hover {
+    background-color: #9e7626;
+    transform: translateY(-2px);
+}
+
+.rooms-btn:active {
+    transform: translateY(0);
+}
+
+.rooms--right-part {
+    position: relative;
+    margin-right: -384px;
+}
+
+.rooms-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* FURNIRO-FURNITURE */
+.furniture {
+    width: 100vw;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.furniture-subtitle {
+    color: rgb(97, 97, 97);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 8px;
+    position: relative;
+    left: -220px;
+}
+
+.furniture-title {
+    color: rgb(58, 58, 58);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    position: relative;
+    left: -220px;
+}
+
+.furniture-img {
+    position: relative;
+    left: -170px;
+    display: block;
+}
+
+/* FOOTER */
+.footer {
+    border-top: 1px #d9d9d9 solid;
+    padding: 48px 100px 38px;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.2fr 3fr;
+    column-gap: 82px;
+}
+
+/* Address Block */
+.furniro-address--title {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0%;
+    margin-bottom: 50px;
+}
+
+.furniro-address--text {
+    color: rgb(159, 159, 159);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+}
+
+/* Links Block */
+.footer-links--title {
+    color: rgb(159, 159, 159);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0%;
+    margin-bottom: 54px;
+}
+
+.footer-links--item {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0%;
+    margin-bottom: 46px;
+    display: block;
+}
+
+.footer-help--title {
+    color: rgb(159, 159, 159);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0%;
+    margin-bottom: 54px;
+}
+
+.footer-help--item {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0%;
+    margin-bottom: 46px;
+    display: block;
+}
+
+/* Footer Links */
+.footer-links--item,
+.footer-help--item {
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-links--item:hover,
+.footer-help--item:hover {
+    color: #b88e2f;
+    padding-left: 8px;
+}
+
+/* Newsletter Block */
+.footer-newsletter--title {
+    color: rgb(159, 159, 159);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0%;
+    margin-bottom: 44px;
+}
+
+.footer-newsletter--input {
+    width: 200px;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px solid #000000;
+    margin-right: 16px;
+}
+
+/* Newsletter Input */
+.footer-newsletter--input {
+    transition: border-color 0.3s ease;
+}
+
+.footer-newsletter--input:focus {
+    outline: none;
+    border-color: #b88e2f;
+}
+
+.footer-newsletter--input::placeholder {
+    color: rgb(159, 159, 159);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.footer-newsletter--btn {
+    color: #000000;
+    font-weight: 500;
+    padding: 8px 0;
+    border-bottom: 1px solid #000000;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+/* Newsletter Button */
+.footer-newsletter--btn {
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-newsletter--btn:hover {
+    color: #b88e2f;
+    border-color: #b88e2f;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #d9d9d9;
+    margin-bottom: 36px;
+}
+
+.footer-copyright {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}

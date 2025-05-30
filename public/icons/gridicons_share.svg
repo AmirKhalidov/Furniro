@@ -1,0 +1,14 @@
+<svg width="16.000000" height="16.000000" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip2_430">
+			<rect id="gridicons:share" rx="0.000000" width="15.000000" height="15.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="gridicons:share" rx="0.000000" width="15.000000" height="15.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip2_430)">
+		<path id="Vector" d="M12 10.66C11.47 10.66 11 10.87 10.64 11.2L5.93 8.46C5.97 8.31 6 8.16 6 8C6 7.84 5.97 7.68 5.93 7.53L10.64 4.79C11 5.12 11.47 5.33 12 5.33C13.1 5.33 14 4.44 14 3.33C14 2.22 13.1 1.33 12 1.33C10.89 1.33 10 2.22 10 3.33C10 3.49 10.02 3.64 10.06 3.8L5.35 6.54C5 6.2 4.52 6 4 6C2.89 6 2 6.89 2 8C2 9.1 2.89 10 4 10C4.52 10 5 9.79 5.35 9.46L10.05 12.2C10.02 12.35 10 12.51 10 12.66C10 13.06 10.11 13.44 10.33 13.77C10.55 14.1 10.86 14.36 11.23 14.51C11.6 14.66 12 14.7 12.39 14.62C12.77 14.55 13.13 14.36 13.41 14.08C13.69 13.8 13.88 13.44 13.96 13.05C14.03 12.66 13.99 12.26 13.84 11.9C13.69 11.53 13.44 11.22 13.11 11C12.78 10.78 12.39 10.66 12 10.66Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>
