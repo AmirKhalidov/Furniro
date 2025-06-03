@@ -4,10 +4,16 @@ import type { Product } from '../types';
 
 export default class ProductListView {
     private productsCardsContainer: HTMLUListElement;
+
+   
+
     constructor() {
         this.productsCardsContainer =
             document.querySelector('.products-cards')!;
+
+        
     }
+
     renderProductCards(products: Product[]) {
         const cards = products
             .map((product: Product) => this.createProductCard(product))
@@ -69,4 +75,6 @@ export default class ProductListView {
                         </li>
       `;
     }
+
+    
 }

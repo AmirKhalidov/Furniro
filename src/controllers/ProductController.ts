@@ -1,6 +1,5 @@
 // связывает список товаров и фильтры
 
-import type { Product } from '../types';
 import ProductModel from '../models/ProductModel';
 import ProductListView from '../views/ProductListView';
 

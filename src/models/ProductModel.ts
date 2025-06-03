@@ -10,13 +10,15 @@ export default class ProductModel {
         this.service = new ProductsService();
     }
 
-    async fetchProducts(): Promise<Product[] | undefined> {
+    async fetchProducts(): Promise<Product[]> {
         try {
             const { products }: { products: Product[] } =
                 await this.service.fetchProductsData();
             return products;
         } catch (error) {
             console.error('Error fetching products:', error);
+            return [];
         }
     }
+
 }
