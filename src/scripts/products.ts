@@ -1,20 +1,28 @@
-import type { Product } from '../types';
+import type { Product, ProductsResponse } from '../types';
 
-const productListElement = document.querySelector('.products__list');
-const itemsPerPageSelect = document.getElementById('items-per-page');
-const sortBySelect = document.getElementById('sort-by');
-const infoText = document.querySelector('.filter-bar__info span');
-const pageButtonsContainer = document.querySelector('.products__page-btns');
+const productListElement = document.querySelector(
+    '.products__list'
+) as HTMLUListElement;
+const itemsPerPageSelect = document.getElementById(
+    'items-per-page'
+) as HTMLSelectElement;
+const sortBySelect = document.getElementById('sort-by') as HTMLSelectElement;
+const infoText = document.querySelector(
+    '.filter-bar__info span'
+) as HTMLSpanElement;
+const pageButtonsContainer = document.querySelector(
+    '.products__page-btns'
+) as HTMLDivElement;
 
-let products = [];
-let currentPage = 1;
-let itemsPerPage = +itemsPerPageSelect.value;
-let totalProducts = 0;
-let totalPages = 1;
+let products: Product[] = [];
+let currentPage: number = 1;
+let itemsPerPage: number = +itemsPerPageSelect.value;
+let totalProducts: number = 0;
+let totalPages: number = 1;
 
-async function fetchProducts() {
+async function fetchProducts(): Promise<void> {
     const res = await fetch('https://dummyjson.com/products?limit=100');
-    const data = await res.json();
+    const data: ProductsResponse = await res.json();
     products = data.products;
     totalProducts = data.total;
     totalPages = Math.ceil(totalProducts / itemsPerPage);
@@ -22,32 +30,9 @@ async function fetchProducts() {
     renderProducts();
 }
 
-function renderProducts() {
+function renderProducts(): void {
     const sorted = sortProducts([...products]);
     const paginated = paginate(sorted, currentPage, itemsPerPage);
-
-    // productListElement.innerHTML = paginated
-    //   .map(
-    //     (product) => `
-    //       <li class="product-item">
-    //         <div class="product-card">
-    //           <img src="${product.thumbnail}" alt="${product.title}" />
-    //           <h3>${product.title}</h3>
-    //           <p>${product.brand}</p>
-    //           <p>
-    //             <span class="price">$${product.price}</span>
-    //             ${
-    //               product.discountPercentage > 0
-    //                 ? `<span class="discount">-${product.discountPercentage}%</span>`
-    //                 : ""
-    //             }
-    //           </p>
-    //           ${product.rating > 4.5 ? '<p class="new-label">New</p>' : ""}
-    //         </div>
-    //       </li>
-    //     `
-    //   )
-    //   .join("");
 
     productListElement.innerHTML = paginated
         .map((product: Product) => createProductCard(product))
@@ -56,7 +41,7 @@ function renderProducts() {
     infoText.textContent = `Showing ${paginated.length} of ${totalProducts} products`;
 }
 
-function createProductCard(product: Product) {
+function createProductCard(product: Product): string {
     return `
         <li class="products-card">
                             <img
@@ -139,7 +124,7 @@ function renderPaginationButtons() {
 
     for (let i = startPage; i <= endPage; i++) {
         const btn = document.createElement('button');
-        btn.textContent = i;
+        btn.textContent = String(i);
         btn.classList.add('products__page-btn');
         if (i === currentPage) {
             btn.disabled = true;
@@ -171,7 +156,7 @@ function renderPaginationButtons() {
     pageButtonsContainer.appendChild(nextBtn);
 }
 
-function sortProducts(productsArray) {
+function sortProducts(productsArray: Product[]): Product[] {
     const sortBy = sortBySelect.value;
     if (sortBy === 'price-asc')
         return productsArray.sort((a, b) => a.price - b.price);
@@ -180,7 +165,7 @@ function sortProducts(productsArray) {
     return productsArray;
 }
 
-function paginate(items, page, perPage) {
+function paginate(items: Product[], page: number, perPage: number): Product[] {
     const start = (page - 1) * perPage;
     return items.slice(start, start + perPage);
 }

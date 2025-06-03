@@ -1,12 +1,10 @@
 // логика получения, фильтрации, сортировки товаров
 
 import ProductsService from '../services/ProductService';
-import type { Product, ProductsResponse } from '../types';
+import type { Product } from '../types';
 
 export default class ProductModel {
     private service: ProductsService;
-    private products: Product[] = [];
-    private totalProducts = 0;
 
     constructor() {
         this.service = new ProductsService();
@@ -23,25 +21,4 @@ export default class ProductModel {
         }
     }
 
-    sortProducts(sortBy: string): Product[] {
-        const sorted = [...this.products];
-        if (sortBy === 'price-asc')
-            return sorted.sort((a, b) => a.price - b.price);
-        if (sortBy === 'price-desc')
-            return sorted.sort((a, b) => b.price - a.price);
-        return sorted;
-    }
-
-    paginateProducts(page: number, perPage: number): Product[] {
-        const start = (page - 1) * perPage;
-        return this.products.slice(start, start + perPage);
-    }
-
-    getTotalPages(itemsPerPage: number): number {
-        return Math.ceil(this.totalProducts / itemsPerPage);
-    }
-
-    getTotalProducts(): number {
-        return this.totalProducts;
-    }
 }

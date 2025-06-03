@@ -5,27 +5,13 @@ import type { Product } from '../types';
 export default class ProductListView {
     private productsCardsContainer: HTMLUListElement;
 
-    private productListElement: HTMLElement;
-    private itemsPerPageSelect: HTMLSelectElement;
-    private sortBySelect: HTMLSelectElement;
-    private infoText: HTMLElement;
-    private pageButtonsContainer: HTMLElement;
+   
 
     constructor() {
         this.productsCardsContainer =
             document.querySelector('.products-cards')!;
 
-        this.productListElement = document.querySelector('.products__list')!;
-        this.itemsPerPageSelect = document.getElementById(
-            'items-per-page'
-        ) as HTMLSelectElement;
-        this.sortBySelect = document.getElementById(
-            'sort-by'
-        ) as HTMLSelectElement;
-        this.infoText = document.querySelector('.filter-bar__info span')!;
-        this.pageButtonsContainer = document.querySelector(
-            '.products__page-btns'
-        )!;
+        
     }
 
     renderProductCards(products: Product[]) {
@@ -33,13 +19,6 @@ export default class ProductListView {
             .map((product: Product) => this.createProductCard(product))
             .join('');
         this.productsCardsContainer.innerHTML = cards;
-    }
-
-    renderProducts(products: Product[], showing: number, total: number) {
-        this.productListElement.innerHTML = products
-            .map((product) => this.createProductCard(product))
-            .join('');
-        this.infoText.textContent = `Showing ${showing} of ${total} products`;
     }
 
     createProductCard(product: Product) {
@@ -97,7 +76,5 @@ export default class ProductListView {
       `;
     }
 
-    renderPagination(currentPage: number, totalPages: number, onPageChange: (page: number) => void) {
-        // Existing pagination render logic
-    }
+    
 }
