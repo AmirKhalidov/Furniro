@@ -1,220 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./styles/style.css" />
-        <script type="module" src="/src/main.ts" defer></script>
-        <title>Furniro</title>
-    </head>
-    <body>
-        <div class="container">
-            <!-- HEADER -->
-            <header class="header">
-                <a class="logo-container" href="/">
-                    <img
-                        src="./public/icons/Logo.svg"
-                        alt="logo"
-                        class="logo-img"
-                    />
-                    <span class="logo-text">Furniro</span>
-                </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script type="module" src="/src/main.ts" defer></script>
+    <title>Furniro</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <header class="header">
+        <a class="logo-container" href="/">
+          <img src="./public/icons/Logo.svg" alt="logo" class="logo-img" />
+          <span class="logo-text">Furniro</span>
+        </a>
 
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">Shop</a>
-                        </li>
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./products.html">Shop</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
 
-                <div class="buttons">
-                    <ul class="buttons-list">
-                        <li>
-                            <a href="#"
-                                ><img
-                                    src="./public/icons/mdi_account-alert-outline.svg"
-                                    alt="account-alert-outline"
-                            /></a>
-                        </li>
+        <div class="buttons">
+          <ul class="buttons-list">
+            <li>
+              <a href="#"
+                ><img
+                  src="./public/icons/mdi_account-alert-outline.svg"
+                  alt="account-alert-outline"
+              /></a>
+            </li>
 
-                        <li>
-                            <a href="#"
-                                ><img
-                                    src="./public/icons/akar-icons_search.svg"
-                                    alt="icons_search"
-                            /></a>
-                        </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./public/icons/akar-icons_search.svg"
+                  alt="icons_search"
+              /></a>
+            </li>
 
-                        <li>
-                            <a href="#"
-                                ><img
-                                    src="./public/icons/akar-icons_heart.svg"
-                                    alt="icons_heart"
-                            /></a>
-                        </li>
+            <li>
+              <a href="/favorites.html"
+                ><img
+                  src="./public/icons/akar-icons_heart.svg"
+                  alt="icons_heart"
+              /></a>
+            </li>
 
-                        <li>
-                            <a href="#"
-                                ><img
-                                    src="./public/icons/ant-design_shopping-cart-outlined.svg"
-                                    alt="cart-outlined"
-                            /></a>
-                        </li>
-                    </ul>
-                </div>
-            </header>
-
-            <!-- MAIN -->
-            <main>
-                <!-- HERO -->
-                <section class="hero-section">
-                    <div class="hero-text">
-                        <p class="hero-arrival">New Arrival</p>
-                        <h1 class="hero-title">Discover Our New Collection</h1>
-                        <p class="hero-subtitle">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Ut elit tellus, luctus nec ullamcorper mattis.
-                        </p>
-                        <button class="hero-btn">buy now</button>
-                    </div>
-                </section>
-
-                <!-- BROWSE THE RANGE -->
-                <section class="browse">
-                    <h2 class="browse-title">Browse The Range</h2>
-                    <p class="browse-subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-
-                    <div class="browse-images">
-                        <div class="browse-images--item">
-                            <img
-                                src="./public/images/browse-1.png"
-                                alt="room"
-                            />
-                            <span class="browse-images--title">Dining</span>
-                        </div>
-
-                        <div class="browse-images--item">
-                            <img
-                                src="./public//images/Image-living room.png"
-                                alt="living room"
-                            />
-                            <span class="browse-images--title">Living</span>
-                        </div>
-
-                        <div class="browse-images--item">
-                            <img
-                                src="./public/images/browse-3.png"
-                                alt="flower"
-                            />
-                            <span class="browse-images--title">Bedroom</span>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- OUR PRODUCTS -->
-                <section class="products">
-                    <h2 class="products-title">Our Products</h2>
-
-                    <ul class="products-cards"></ul>
-
-                    <a
-                        href="./products.html"
-                        target="_blank"
-                        class="products-show-more"
-                        >Show More</a
-                    >
-                </section>
-
-                <!-- BEAUTIFUL ROOMS -->
-                <section class="rooms">
-                    <div class="rooms--left-part">
-                        <h2 class="rooms-title">
-                            50+ Beautiful rooms inspiration
-                        </h2>
-                        <p class="rooms-subtitle">
-                            Our designer already made a lot of beautiful
-                            prototipe of rooms that inspire you
-                        </p>
-                        <button class="rooms-btn">Explore More</button>
-                    </div>
-                    <div class="rooms--right-part">
-                        <img
-                            src="./public/images/Products.png"
-                            alt="products"
-                            class="rooms-img"
-                        />
-                    </div>
-                </section>
-
-                <!-- FURNIRO-FURNITURE -->
-                <section class="furniture">
-                    <p class="furniture-subtitle">Share your setup with</p>
-                    <h4 class="furniture-title">#FurniroFurniture</h4>
-                    <img
-                        class="furniture-img"
-                        src="./public/images/Images.png"
-                        alt="images"
-                    />
-                </section>
-            </main>
-
-            <!-- FOOTER -->
-            <footer class="footer">
-                <div class="footer-main">
-                    <div class="furniro-address">
-                        <h4 class="furniro-address--title">Furniro.</h4>
-                        <address class="furniro-address--text">
-                            400 University Drive Suite 200 Coral <br />
-                            Gables, <br />
-                            FL 33134 USA
-                        </address>
-                    </div>
-                    <div class="footer-links">
-                        <p class="footer-links--title">Links</p>
-                        <a href="#" class="footer-links--item">Home</a>
-                        <a href="#" class="footer-links--item">Shop</a>
-                        <a href="#" class="footer-links--item">About</a>
-                        <a href="#" class="footer-links--item">Contact</a>
-                    </div>
-                    <div class="footer-help">
-                        <p class="footer-help--title">Help</p>
-                        <a href="#" class="footer-help--item"
-                            >Payment Options</a
-                        >
-                        <a href="#" class="footer-help--item">Returns</a>
-                        <a href="#" class="footer-help--item"
-                            >Privacy Policies</a
-                        >
-                    </div>
-                    <form class="footer-newsletter">
-                        <p class="footer-newsletter--title">Newsletter</p>
-                        <input
-                            class="footer-newsletter--input"
-                            placeholder="Enter Your Email Address"
-                        />
-                        <button class="footer-newsletter--btn">
-                            SUBSCRIBE
-                        </button>
-                    </form>
-                </div>
-
-                <div class="divider"></div>
-                <p class="footer-copyright">
-                    2023 Furniro. All rights reserved
-                </p>
-            </footer>
+            <li>
+              <a href="/cart.html"
+                ><img
+                  src="./public/icons/ant-design_shopping-cart-outlined.svg"
+                  alt="cart-outlined"
+              /></a>
+            </li>
+          </ul>
         </div>
-    </body>
+      </header>
+
+      <!-- MAIN -->
+      <main>
+        <!-- HERO -->
+        <section class="hero-section">
+          <div class="hero-text">
+            <p class="hero-arrival">New Arrival</p>
+            <h1 class="hero-title">Discover Our New Collection</h1>
+            <p class="hero-subtitle">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis.
+            </p>
+            <button class="hero-btn">buy now</button>
+          </div>
+        </section>
+
+        <!-- BROWSE THE RANGE -->
+        <section class="browse">
+          <h2 class="browse-title">Browse The Range</h2>
+          <p class="browse-subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+
+          <div class="browse-images">
+            <div class="browse-images--item">
+              <img src="./public/images/browse-1.png" alt="room" />
+              <span class="browse-images--title">Dining</span>
+            </div>
+
+            <div class="browse-images--item">
+              <img
+                src="./public//images/Image-living room.png"
+                alt="living room"
+              />
+              <span class="browse-images--title">Living</span>
+            </div>
+
+            <div class="browse-images--item">
+              <img src="./public/images/browse-3.png" alt="flower" />
+              <span class="browse-images--title">Bedroom</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- OUR PRODUCTS -->
+        <section class="products">
+          <h2 class="products-title">Our Products</h2>
+
+          <ul class="products-cards"></ul>
+
+          <a href="./products.html" class="products-show-more">Show More</a>
+        </section>
+
+        <!-- BEAUTIFUL ROOMS -->
+        <section class="rooms">
+          <div class="rooms--left-part">
+            <h2 class="rooms-title">50+ Beautiful rooms inspiration</h2>
+            <p class="rooms-subtitle">
+              Our designer already made a lot of beautiful prototipe of rooms
+              that inspire you
+            </p>
+            <button class="rooms-btn">Explore More</button>
+          </div>
+          <div class="rooms--right-part">
+            <img
+              src="./public/images/Products.png"
+              alt="products"
+              class="rooms-img"
+            />
+          </div>
+        </section>
+
+        <!-- FURNIRO-FURNITURE -->
+        <section class="furniture">
+          <p class="furniture-subtitle">Share your setup with</p>
+          <h4 class="furniture-title">#FurniroFurniture</h4>
+          <img
+            class="furniture-img"
+            src="./public/images/Images.png"
+            alt="images"
+          />
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-main">
+          <div class="furniro-address">
+            <h4 class="furniro-address--title">Furniro.</h4>
+            <address class="furniro-address--text">
+              400 University Drive Suite 200 Coral <br />
+              Gables, <br />
+              FL 33134 USA
+            </address>
+          </div>
+          <div class="footer-links">
+            <p class="footer-links--title">Links</p>
+            <a href="#" class="footer-links--item">Home</a>
+            <a href="#" class="footer-links--item">Shop</a>
+            <a href="#" class="footer-links--item">About</a>
+            <a href="#" class="footer-links--item">Contact</a>
+          </div>
+          <div class="footer-help">
+            <p class="footer-help--title">Help</p>
+            <a href="#" class="footer-help--item">Payment Options</a>
+            <a href="#" class="footer-help--item">Returns</a>
+            <a href="#" class="footer-help--item">Privacy Policies</a>
+          </div>
+          <form class="footer-newsletter">
+            <p class="footer-newsletter--title">Newsletter</p>
+            <input
+              class="footer-newsletter--input"
+              placeholder="Enter Your Email Address"
+            />
+            <button class="footer-newsletter--btn">SUBSCRIBE</button>
+          </form>
+        </div>
+
+        <div class="divider"></div>
+        <p class="footer-copyright">2023 Furniro. All rights reserved</p>
+      </footer>
+    </div>
+  </body>
 </html>

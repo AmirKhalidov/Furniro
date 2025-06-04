@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script type="module" src="/src/scripts/cart.ts" defer></script>
+    <title>Cart - Furniro</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a class="logo-container" href="/">
+          <img src="./public/icons/Logo.svg" alt="logo" class="logo-img" />
+          <span class="logo-text">Furniro</span>
+        </a>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li>
+              <a href="/index.html">Home</a>
+            </li>
+            <li>
+              <a href="/products.html">Shop</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="buttons">
+          <ul class="buttons-list">
+            <li>
+              <a href="#"
+                ><img
+                  src="./public/icons/mdi_account-alert-outline.svg"
+                  alt="account-alert-outline"
+              /></a>
+            </li>
+
+            <li>
+              <a href="#"
+                ><img
+                  src="./public/icons/akar-icons_search.svg"
+                  alt="icons_search"
+              /></a>
+            </li>
+
+            <li>
+              <a href="/favorites.html"
+                ><img
+                  src="./public/icons/akar-icons_heart.svg"
+                  alt="icons_heart"
+              /></a>
+            </li>
+
+            <li>
+              <a href="/cart.html"
+                ><img
+                  src="./public/icons/ant-design_shopping-cart-outlined.svg"
+                  alt="cart-outlined"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <main>
+        <section class="cart-nav-container">
+          <img
+            class="cart-nav__logo"
+            src="./public/icons/cart-nav-logo.svg"
+            alt="logo"
+          />
+          <h2 class="cart-nav__title">Cart</h2>
+          <nav class="cart-nav">
+            <a class="cart-nav__home" href="/index.html">Home</a>
+            <span class="separator"
+              ><img
+                src="public/icons/dashicons_arrow-down-alt2.png"
+                class="hero__separator"
+            /></span>
+            <a class="cart-nav__cart" href="#">Cart</a>
+          </nav>
+        </section>
+        <section class="cart-section">
+          <div class="cart-items">
+            <table>
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Subtotal</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cart-items-added">
+                    <img src="" alt="" />
+                    <p></p>
+                  </td>
+                  <td></td>
+                  <td><input type="number" value="1" min="1" /></td>
+                  <td></td>
+                  <td>
+                    <button>
+                      <img
+                        class="cart-items-del-icon"
+                        src="./public/icons/cart-items-delete.svg"
+                        alt="del-logo"
+                      />
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="cart-totals">
+            <h3>Cart Totals</h3>
+            <p>
+              <span class="subtotal-title">Subtotal</span>
+              <span class="subtotal-price"></span>
+            </p>
+            <p class="total">
+              <span class="total-title">Total</span>
+              <span class="total-price"></span>
+            </p>
+            <button>Check Out</button>
+          </div>
+        </section>
+        <section class="benefits-section">
+          <div class="benefit">
+            <div class="benefit-icons">
+              <img
+                src="./public/icons/cart-benefits-quality.svg"
+                alt="High Quality"
+              />
+            </div>
+            <div class="benefit-title">
+              <h4>High Quality</h4>
+              <p>crafted from top materials</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icons">
+              <img
+                src="./public/icons/cart-benefits-warranty.svg"
+                alt="Warranty"
+              />
+            </div>
+            <div class="benefit-title">
+              <h4>Warranty Protection</h4>
+              <p>Over 2 years</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icons">
+              <img
+                src="./public/icons/cart-benefits-ship.svg"
+                alt="Free Shipping"
+              />
+            </div>
+            <div class="benefit-title">
+              <h4>Free Shipping</h4>
+              <p>Order over 150 $</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icons">
+              <img
+                src="./public/icons/cart-benefits-support.svg"
+                alt="Support"
+              />
+            </div>
+            <div class="benefit-title">
+              <h4>24 / 7 Support</h4>
+              <p>Dedicated support</p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-main">
+          <div class="furniro-address">
+            <h4 class="furniro-address--title">Furniro.</h4>
+            <address class="furniro-address--text">
+              400 University Drive Suite 200 Coral <br />
+              Gables, <br />
+              FL 33134 USA
+            </address>
+          </div>
+          <div class="footer-links">
+            <p class="footer-links--title">Links</p>
+            <a href="#" class="footer-links--item">Home</a>
+            <a href="#" class="footer-links--item">Shop</a>
+            <a href="#" class="footer-links--item">About</a>
+            <a href="#" class="footer-links--item">Contact</a>
+          </div>
+          <div class="footer-help">
+            <p class="footer-help--title">Help</p>
+            <a href="#" class="footer-help--item">Payment Options</a>
+            <a href="#" class="footer-help--item">Returns</a>
+            <a href="#" class="footer-help--item">Privacy Policies</a>
+          </div>
+          <form class="footer-newsletter">
+            <p class="footer-newsletter--title">Newsletter</p>
+            <input
+              class="footer-newsletter--input"
+              placeholder="Enter Your Email Address"
+            />
+            <button class="footer-newsletter--btn">SUBSCRIBE</button>
+          </form>
+        </div>
+        <div class="divider"></div>
+        <p class="footer-copyright">2023 Furniro. All rights reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>

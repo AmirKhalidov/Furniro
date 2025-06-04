@@ -1,269 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Vite + TS</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./styles/style.css" />
-    </head>
-    <body>
-        <div class="container">
-            <header class="header">
-                <a class="logo-container" href="/">
-                    <img
-                        src="./public/icons/Logo.svg"
-                        alt="logo"
-                        class="logo-img"
-                    />
-                    <span class="logo-text">Furniro</span>
-                </a>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - Furniro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a class="logo-container" href="/">
+          <img src="./public/icons/Logo.svg" alt="logo" class="logo-img" />
+          <span class="logo-text">Furniro</span>
+        </a>
 
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">Shop</a>
-                        </li>
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li>
+              <a href="/index.html">Home</a>
+            </li>
+            <li>
+              <a href="/products.html">Shop</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
 
-                <div class="buttons">
-                    <ul class="buttons-list">
-                        <li>
-                            <a href="#"
-                                ><img
-                                    src="./public/icons/mdi_account-alert-outline.svg"
-                                    alt="account-alert-outline"
-                            /></a>
-                        </li>
+        <div class="buttons">
+          <ul class="buttons-list">
+            <li>
+              <a href="#"
+                ><img
+                  src="./public/icons/mdi_account-alert-outline.svg"
+                  alt="account-alert-outline"
+              /></a>
+            </li>
 
-                        <li>
-                            <a href="#"
-                                ><img
-                                    src="./public/icons/akar-icons_search.svg"
-                                    alt="icons_search"
-                            /></a>
-                        </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./public/icons/akar-icons_search.svg"
+                  alt="icons_search"
+              /></a>
+            </li>
 
-                        <li>
-                            <a href="#"
-                                ><img
-                                    src="./public/icons/akar-icons_heart.svg"
-                                    alt="icons_heart"
-                            /></a>
-                        </li>
+            <li>
+              <a href="/favorites.html"
+                ><img
+                  src="./public/icons/akar-icons_heart.svg"
+                  alt="icons_heart"
+              /></a>
+            </li>
 
-                        <li>
-                            <a href="#"
-                                ><img
-                                    src="./public/icons/ant-design_shopping-cart-outlined.svg"
-                                    alt="cart-outlined"
-                            /></a>
-                        </li>
-                    </ul>
-                </div>
-            </header>
-            <main>
-                <section class="hero">
-                    <div class="hero__content">
-                        <h1 class="hero__title">Shop</h1>
-                        <ul class="hero__list">
-                            <li class="hero__item">
-                                <a href="/index.html" class="hero__link"
-                                    >Home</a
-                                >
-                            </li>
-                            <li class="hero__item">
-                                <img
-                                    src="public/icons/dashicons_arrow-down-alt2.png"
-                                    class="hero__separator"
-                                />
-                            </li>
-                            <li class="hero__item">
-                                <a href="/products.html" class="hero__link"
-                                    >Shop</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="filter-bar">
-                    <div class="filter-bar__container">
-                        <button class="filter-bar__filter-btn">
-                            <img src="public/icons/Vector.png" />
-                        </button>
-
-                        <select>
-                            <option hidden>Filter</option>
-                            <option>By category</option>
-                            <option>By price</option>
-                        </select>
-
-                        <button class="filter-bar__grid-btn">
-                            <img src="public/icons/Vector-2.png" />
-                        </button>
-                        <button class="filter-bar__list-btn">
-                            <img src="public/icons/bi_view-list.png" />
-                        </button>
-                        <button>
-                            <img src="public/icons/Line 5.png" />
-                        </button>
-                        <p class="filter-bar__info">Showing <span>0</span></p>
-                    </div>
-
-                    <div class="filter-controls">
-                        <div class="filter-controls__group">
-                            <label
-                                for="items-per-page"
-                                class="filter-controls__label"
-                                >Show</label
-                            >
-                            <select
-                                id="items-per-page"
-                                class="filter-controls__select"
-                            >
-                                <option value="4">4</option>
-                                <option value="8">8</option>
-                                <option value="16">16</option>
-                            </select>
-                        </div>
-
-                        <div class="filter-controls__group">
-                            <label for="sort-by" class="filter-controls__label"
-                                >Sort by</label
-                            >
-                            <select
-                                id="sort-by"
-                                class="filter-controls__select"
-                            >
-                                <option value="default">Default</option>
-                                <option value="price-asc">
-                                    Price: Low to High
-                                </option>
-                                <option value="price-desc">
-                                    Price: High to Low
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="products__container">
-                    <ul class="products__list"></ul>
-                    <div class="products__page-btns">
-                        <button class="products__page-btn">1</button>
-                        <button class="products__page-btn">2</button>
-                        <button class="products__page-btn">3</button>
-                        <button class="products__page-btn">Next</button>
-                    </div>
-                </section>
-                <section class="store-benefits">
-                    <ul class="store-benefits__list">
-                        <li class="store-benefits__item">
-                            <img src="public/icons/Vector-3.png" alt="" />
-                            <div class="store-benefits__info">
-                                <h2 class="store-benefits__title">
-                                    High Quality
-                                </h2>
-                                <p class="store-benefits__text">
-                                    crafted from top materials
-                                </p>
-                            </div>
-                        </li>
-                        <li class="store-benefits__item">
-                            <img src="public/icons/Vector-4.png" alt="" />
-                            <div class="store-benefits__info">
-                                <h2 class="store-benefits__title">
-                                    Warranty Protection
-                                </h2>
-                                <p class="store-benefits__text">Over 2 years</p>
-                            </div>
-                        </li>
-                        <li class="store-benefits__item">
-                            <img src="public/icons/Vector-5.png" alt="" />
-                            <div class="store-benefits__info">
-                                <h2 class="store-benefits__title">
-                                    Free Shipping
-                                </h2>
-                                <p class="store-benefits__text">
-                                    Order over 150 $
-                                </p>
-                            </div>
-                        </li>
-                        <li class="store-benefits__item">
-                            <img src="public/icons/Vector-6.png" alt="" />
-                            <div class="store-benefits__info">
-                                <h2 class="store-benefits__title">
-                                    24 / 7 Support
-                                </h2>
-                                <p class="store-benefits__text">
-                                    Dedicated support
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-            </main>
-            <footer class="footer">
-                <div class="footer-main">
-                    <div class="furniro-address">
-                        <h4 class="furniro-address--title">Furniro.</h4>
-                        <address class="furniro-address--text">
-                            400 University Drive Suite 200 Coral <br />
-                            Gables, <br />
-                            FL 33134 USA
-                        </address>
-                    </div>
-                    <div class="footer-links">
-                        <p class="footer-links--title">Links</p>
-                        <a href="#" class="footer-links--item">Home</a>
-                        <a href="#" class="footer-links--item">Shop</a>
-                        <a href="#" class="footer-links--item">About</a>
-                        <a href="#" class="footer-links--item">Contact</a>
-                    </div>
-                    <div class="footer-help">
-                        <p class="footer-help--title">Help</p>
-                        <a href="#" class="footer-help--item"
-                            >Payment Options</a
-                        >
-                        <a href="#" class="footer-help--item">Returns</a>
-                        <a href="#" class="footer-help--item"
-                            >Privacy Policies</a
-                        >
-                    </div>
-                    <form class="footer-newsletter">
-                        <p class="footer-newsletter--title">Newsletter</p>
-                        <input
-                            class="footer-newsletter--input"
-                            placeholder="Enter Your Email Address"
-                        />
-                        <button class="footer-newsletter--btn">
-                            SUBSCRIBE
-                        </button>
-                    </form>
-                </div>
-
-                <div class="divider"></div>
-                <p class="footer-copyright">
-                    2023 Furniro. All rights reserved
-                </p>
-            </footer>
+            <li>
+              <a href="/cart.html"
+                ><img
+                  src="./public/icons/ant-design_shopping-cart-outlined.svg"
+                  alt="cart-outlined"
+              /></a>
+            </li>
+          </ul>
         </div>
-        <script type="module" src="/src/scripts/products.ts"></script>
-    </body>
+      </header>
+      <main>
+        <section class="hero">
+          <div class="hero__content">
+            <h1 class="hero__title">Shop</h1>
+            <ul class="hero__list">
+              <li class="hero__item">
+                <a href="/index.html" class="hero__link">Home</a>
+              </li>
+              <li class="hero__item">
+                <img
+                  src="public/icons/dashicons_arrow-down-alt2.png"
+                  class="hero__separator"
+                />
+              </li>
+              <li class="hero__item">
+                <a href="/products.html" class="hero__link">Shop</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="filter-bar">
+          <div class="filter-bar__container">
+            <button class="filter-bar__filter-btn">
+              <img src="public/icons/Vector.png" />
+            </button>
+
+            <select id="category" class="filter-select"></select>
+
+            <button class="filter-bar__grid-btn">
+              <img src="public/icons/Vector-2.png" />
+            </button>
+            <button class="filter-bar__list-btn">
+              <img src="public/icons/bi_view-list.png" />
+            </button>
+            <button>
+              <img src="public/icons/Line 5.png" />
+            </button>
+            <p class="filter-bar__info">Showing <span>0</span></p>
+          </div>
+
+          <div class="filter-controls">
+            <div class="filter-controls__group">
+              <label for="items-per-page" class="filter-controls__label"
+                >Show</label
+              >
+              <select id="items-per-page" class="filter-controls__select">
+                <option value="4">4</option>
+                <option value="8">8</option>
+                <option value="16">16</option>
+              </select>
+            </div>
+
+            <div class="filter-controls__group">
+              <label for="sort-by" class="filter-controls__label"
+                >Sort by</label
+              >
+              <select id="sort-by" class="filter-controls__select">
+                <option value="default">Default</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section class="products__container">
+          <ul class="products__list"></ul>
+          <div class="products__page-btns">
+            <button class="products__page-btn">1</button>
+            <button class="products__page-btn">2</button>
+            <button class="products__page-btn">3</button>
+            <button class="products__page-btn">Next</button>
+          </div>
+        </section>
+        <section class="benefits-section">
+          <div class="benefit">
+            <div class="benefit-icons">
+              <img
+                src="./public/icons/cart-benefits-quality.svg"
+                alt="High Quality"
+              />
+            </div>
+            <div class="benefit-title">
+              <h4>High Quality</h4>
+              <p>crafted from top materials</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icons">
+              <img
+                src="./public/icons/cart-benefits-warranty.svg"
+                alt="Warranty"
+              />
+            </div>
+            <div class="benefit-title">
+              <h4>Warranty Protection</h4>
+              <p>Over 2 years</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icons">
+              <img
+                src="./public/icons/cart-benefits-ship.svg"
+                alt="Free Shipping"
+              />
+            </div>
+            <div class="benefit-title">
+              <h4>Free Shipping</h4>
+              <p>Order over 150 $</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icons">
+              <img
+                src="./public/icons/cart-benefits-support.svg"
+                alt="Support"
+              />
+            </div>
+            <div class="benefit-title">
+              <h4>24 / 7 Support</h4>
+              <p>Dedicated support</p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-main">
+          <div class="furniro-address">
+            <h4 class="furniro-address--title">Furniro.</h4>
+            <address class="furniro-address--text">
+              400 University Drive Suite 200 Coral <br />
+              Gables, <br />
+              FL 33134 USA
+            </address>
+          </div>
+          <div class="footer-links">
+            <p class="footer-links--title">Links</p>
+            <a href="#" class="footer-links--item">Home</a>
+            <a href="#" class="footer-links--item">Shop</a>
+            <a href="#" class="footer-links--item">About</a>
+            <a href="#" class="footer-links--item">Contact</a>
+          </div>
+          <div class="footer-help">
+            <p class="footer-help--title">Help</p>
+            <a href="#" class="footer-help--item">Payment Options</a>
+            <a href="#" class="footer-help--item">Returns</a>
+            <a href="#" class="footer-help--item">Privacy Policies</a>
+          </div>
+          <form class="footer-newsletter">
+            <p class="footer-newsletter--title">Newsletter</p>
+            <input
+              class="footer-newsletter--input"
+              placeholder="Enter Your Email Address"
+            />
+            <button class="footer-newsletter--btn">SUBSCRIBE</button>
+          </form>
+        </div>
+
+        <div class="divider"></div>
+        <p class="footer-copyright">2023 Furniro. All rights reserved</p>
+      </footer>
+    </div>
+    <script type="module" src="/src/scripts/products.ts"></script>
+  </body>
 </html>
