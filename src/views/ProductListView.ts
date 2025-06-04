@@ -1,28 +1,23 @@
 // отображение всех товаров (карточки, фильтры)
 
-import type { Product } from '../types';
+import type { Product } from "../types";
 
 export default class ProductListView {
-    private productsCardsContainer: HTMLUListElement;
+  private productsCardsContainer: HTMLUListElement;
 
-   
+  constructor() {
+    this.productsCardsContainer = document.querySelector(".products-cards")!;
+  }
 
-    constructor() {
-        this.productsCardsContainer =
-            document.querySelector('.products-cards')!;
+  renderProductCards(products: Product[]) {
+    const cards = products
+      .map((product: Product) => this.createProductCard(product))
+      .join("");
+    this.productsCardsContainer.innerHTML = cards;
+  }
 
-        
-    }
-
-    renderProductCards(products: Product[]) {
-        const cards = products
-            .map((product: Product) => this.createProductCard(product))
-            .join('');
-        this.productsCardsContainer.innerHTML = cards;
-    }
-
-    createProductCard(product: Product) {
-        return `
+  createProductCard(product: Product) {
+    return `
         <li class="products-card">
                             <img
                                 src="${product.images[0]}"
@@ -30,7 +25,7 @@ export default class ProductListView {
                                 class="products-card--img"
                             />
                             <div class="card-overlay">
-                                <button class="add-to-cart-btn">
+                                <button id="add-to-cart-btn" class="add-to-cart-btn">
                                     Add to cart
                                 </button>
                                 <div class="card-actions">
@@ -59,22 +54,20 @@ export default class ProductListView {
                             </div>
                             <div class="products-card-text">
                                 <h5 class="products-card--title">${product.title
-                                    .split(' ')
-                                    .splice(0, 2)
-                                    .join(' ')}</h5>
+                                  .split(" ")
+                                  .splice(0, 2)
+                                  .join(" ")}</h5>
                                 <p class="products-card--desc">
                                     ${product.description
-                                        .split(' ')
-                                        .splice(0, 3)
-                                        .join(' ')}
+                                      .split(" ")
+                                      .splice(0, 3)
+                                      .join(" ")}
                                 </p>
                                 <p class="products-card--price">USD $${
-                                    product.price
+                                  product.price
                                 }</p>
                             </div>
                         </li>
       `;
-    }
-
-    
+  }
 }

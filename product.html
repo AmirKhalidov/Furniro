@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Product - Furniro</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <script type="module" src="/src/scripts/products-list.ts" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a class="logo-container" href="/">
+          <img src="./public/icons/Logo.svg" alt="logo" class="logo-img" />
+          <span class="logo-text">Furniro</span>
+        </a>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="/products.html">Shop</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="buttons">
+          <ul class="buttons-list">
+            <li>
+              <a href="#"
+                ><img
+                  src="./public/icons/mdi_account-alert-outline.svg"
+                  alt="account-alert-outline"
+              /></a>
+            </li>
+
+            <li>
+              <a href="#"
+                ><img
+                  src="./public/icons/akar-icons_search.svg"
+                  alt="icons_search"
+              /></a>
+            </li>
+
+            <li>
+              <a href="/favorites.html"
+                ><img
+                  src="./public/icons/akar-icons_heart.svg"
+                  alt="icons_heart"
+              /></a>
+            </li>
+
+            <li>
+              <a href="/cart.html"
+                ><img
+                  src="./public/icons/ant-design_shopping-cart-outlined.svg"
+                  alt="cart-outlined"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <main>
+        <nav class="breadcrumb">
+          <a href="/index.html">Home</a>
+          <span class="separator">></span>
+          <a href="/products.html">Shop</a>
+          <span class="separator">></span>
+          <span class="product-name"></span>
+        </nav>
+        <section class="product-container">
+          <div class="product-images">
+            <div class="thumbnails"></div>
+            <div class="main-image">
+              <img src="" alt="Main image" id="main-image" />
+            </div>
+          </div>
+          <div class="product-details" id="product-details">
+            <h1></h1>
+            <div class="product-price"></div>
+            <div class="product-status"></div>
+            <div class="product-rating">
+              <span class="stars">★★★★★</span>
+              <span class="customer-review">5 Customer Review</span>
+            </div>
+            <div class="product-description"></div>
+            <div class="product-options">
+              <label>Size</label>
+              <div class="size-selector">
+                <button class="size-option">S</button>
+                <button class="size-option">M</button>
+                <button class="size-option">L</button>
+              </div>
+              <label>Color</label>
+              <div class="color-selector">
+                <div
+                  class="color-option"
+                  style="background-color: #816dfa"
+                ></div>
+                <div
+                  class="color-option"
+                  style="background-color: #000000"
+                ></div>
+                <div
+                  class="color-option"
+                  style="background-color: #b88e2f"
+                ></div>
+              </div>
+            </div>
+            <div class="action-buttons">
+              <div class="quantity-selector">
+                <button type="button" onclick="decreaseQuantity()">-</button>
+                <input type="number" id="quantity" value="1" min="1" />
+                <button type="button" onclick="increaseQuantity()">+</button>
+              </div>
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="compare-btn"><span>+</span> Compare</button>
+            </div>
+            <div class="product-meta">
+              <div>
+                <span class="label">SKU</span>:
+                <span class="label__text" id="sku"></span>
+              </div>
+              <div>
+                <span class="label">Category</span>:
+                <span class="label__text" id="category"></span>
+              </div>
+              <div>
+                <span class="label">Tags</span>:
+                <span class="label__text" id="tags"></span>
+              </div>
+              <div class="share-line">
+                <span class="label">Share</span>:
+                <div class="share-icons">
+                  <img src="/public/icons/facebook-icon.svg" alt="Facebook" />
+                  <img src="/public/icons/linkedIn-icon.svg" alt="LinkedIn" />
+                  <img src="/public/icons/twitter-icon.svg" alt="Twitter" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="tabs">
+          <nav>
+            <a href="#description" class="active">Description</a>
+            <a href="#additional-info">Additional Information</a>
+            <a href="#reviews">Reviews</a>
+          </nav>
+          <div id="description" class="tab-content active">
+            <p class="tab-content__text">
+              Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn
+              portable active stereo speaker takes the unmistakable look and
+              sound of Marshall, unplugs the chords, and takes the show on the
+              road.
+            </p>
+            <p class="tab-content__subtext">
+              Weighing in under 7 pounds, the Kilburn is a lightweight piece of
+              vintage styled engineering. Setting the bar as one of the loudest
+              speakers in its class, the Kilburn is a compact, stout-hearted
+              hero with a well-balanced audio which boasts a clear midrange and
+              extended highs for a sound that is both articulate and pronounced.
+              The analogue knobs allow you to fine tune the controls to your
+              personal preferences while the guitar-influenced leather strap
+              enables easy and stylish travel.
+            </p>
+          </div>
+          <div class="tab-images">
+            <img
+              src="/public/images/tab-image-sofa.png"
+              alt="Product Image 1"
+            />
+            <img
+              src="/public/images/tab-image-sofa.png"
+              alt="Product Image 2"
+            />
+          </div>
+        </section>
+        <section class="related-products-container">
+          <h2>Related Products</h2>
+          <div class="related-products-grid">
+            <div class="related-product-card">
+              <img
+                src="/public/images/related-products-1.png"
+                alt="Syltherine"
+              />
+              <div class="related-product-card-content">
+                <h3>Syltherine</h3>
+                <h4>Stylish cafe chair</h4>
+                <div class="price">
+                  <p class="discounted-price">Rp 2.500.000</p>
+                  <p class="original-price">Rp 8.500.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="related-product-card">
+              <img
+                src="/public/images/related-products-2.png"
+                alt="Leviiosa chair"
+              />
+              <div class="related-product-card-content">
+                <h3>Leviiosa chair</h3>
+                <h4>Stylish cafe chair</h4>
+                <div class="price">
+                  <p class="discounted-price">Rp 2.500.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="related-product-card">
+              <img
+                src="/public/images/related-products-3.png"
+                alt="Lolito sofa"
+              />
+              <div class="related-product-card-content">
+                <h3>Lolito sofa</h3>
+                <h4>Luxury big sofa</h4>
+                <div class="price">
+                  <p class="discounted-price">Rp 7.000.000</p>
+                  <p class="original-price">Rp 14.000.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="related-product-card">
+              <img
+                src="/public/images/related-products-4.png"
+                alt="Respira table and stool"
+              />
+              <div class="related-product-card-content">
+                <h3>Respira</h3>
+                <h4>Outdoor bar table and stool</h4>
+                <div class="price">
+                  <p class="discounted-price">Rp 500.000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="products-show-more">Show More</a>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-main">
+          <div class="furniro-address">
+            <h4 class="furniro-address--title">Furniro.</h4>
+            <address class="furniro-address--text">
+              400 University Drive Suite 200 Coral <br />
+              Gables, <br />
+              FL 33134 USA
+            </address>
+          </div>
+          <div class="footer-links">
+            <p class="footer-links--title">Links</p>
+            <a href="#" class="footer-links--item">Home</a>
+            <a href="#" class="footer-links--item">Shop</a>
+            <a href="#" class="footer-links--item">About</a>
+            <a href="#" class="footer-links--item">Contact</a>
+          </div>
+          <div class="footer-help">
+            <p class="footer-help--title">Help</p>
+            <a href="#" class="footer-help--item">Payment Options</a>
+            <a href="#" class="footer-help--item">Returns</a>
+            <a href="#" class="footer-help--item">Privacy Policies</a>
+          </div>
+          <form class="footer-newsletter">
+            <p class="footer-newsletter--title">Newsletter</p>
+            <input
+              class="footer-newsletter--input"
+              placeholder="Enter Your Email Address"
+            />
+            <button class="footer-newsletter--btn">SUBSCRIBE</button>
+          </form>
+        </div>
+
+        <div class="divider"></div>
+        <p class="footer-copyright">2023 Furniro. All rights reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>
